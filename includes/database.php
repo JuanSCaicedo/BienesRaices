@@ -1,5 +1,9 @@
 <?php
 
+// Cargar el archivo .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
+
 $db = mysqli_connect(
     $_ENV['DB_HOST'],
     $_ENV['DB_USER'],
